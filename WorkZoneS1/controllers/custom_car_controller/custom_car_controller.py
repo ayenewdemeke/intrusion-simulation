@@ -1,7 +1,7 @@
 from vehicle import Driver
 
 driver = Driver()
-driver.setCruisingSpeed(50)
+driver.setCruisingSpeed(10)
 
 while driver.step() != -1:
     pass

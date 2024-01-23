@@ -25,7 +25,7 @@ def calculate_magnitude(accel_data):
 robot.setCustomData("")
 
 # Main loop
-threshold = 300
+threshold = 100
 start_time = robot.getTime()  # Get the start time of the simulation
 
 while robot.step(timestep) != -1:

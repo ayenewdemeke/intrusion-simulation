@@ -4,7 +4,7 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/RoadLine.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/StraightRoadSegment.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/range_rover/RangeRoverSportSVR.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/toyota/ToyotaPrius.proto"
 
 WorldInfo {
   info [
@@ -80,8 +80,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.2268371743888317 0.11556530680440216 -0.9670519924898016 2.2260346259025248
-  position 270.3898142189943 56.92007329343096 30.72514451222213
+  orientation 0.25329174177047875 0.17937453765011072 -0.9506145742590348 1.9565571185750745
+  position 190.98617074969368 7.256528371890323 7.533429343511851
   near 1
   followType "None"
   followSmoothness 0
@@ -194,10 +194,9 @@ DEF SCONE1 Robot {
     }
   }
   controller "traffic_cone_controller"
-  customData "moved"
 }
 DEF SCONE2 Robot {
-  translation 157.6 -7.1161 0.35
+  translation 157.6 -6.9 0.35
   children [
     Gyro {
     }
@@ -249,10 +248,9 @@ DEF SCONE2 Robot {
     }
   }
   controller "traffic_cone_controller"
-  customData "moved"
 }
 DEF SCONE3 Robot {
-  translation 165.2 -6.8323 0.35
+  translation 165.2 -6.5 0.35
   children [
     Gyro {
     }
@@ -304,10 +302,9 @@ DEF SCONE3 Robot {
     }
   }
   controller "traffic_cone_controller"
-  customData "moved"
 }
 DEF SCONE4 Robot {
-  translation 172.8 -6.5484 0.35
+  translation 172.8 -6 0.35
   children [
     Gyro {
     }
@@ -362,7 +359,7 @@ DEF SCONE4 Robot {
   customData "moved"
 }
 DEF SCONE5 Robot {
-  translation 180.4 -6.2645 0.35
+  translation 180.4 -5.6 0.35
   children [
     Gyro {
     }
@@ -417,7 +414,7 @@ DEF SCONE5 Robot {
   customData "moved"
 }
 DEF SCONE6 Robot {
-  translation 188 -5.9807 0.35
+  translation 188 -5.1 0.35
   children [
     Gyro {
     }
@@ -472,7 +469,7 @@ DEF SCONE6 Robot {
   customData "moved"
 }
 DEF SCONE7 Robot {
-  translation 195.6 -5.6968 0.35
+  translation 195.6 -4.6 0.35
   children [
     Gyro {
     }
@@ -524,10 +521,9 @@ DEF SCONE7 Robot {
     }
   }
   controller "traffic_cone_controller"
-  customData "moved"
 }
 DEF SCONE8 Robot {
-  translation 203.2 -5.4129 0.35
+  translation 203.2 -4.2 0.35
   children [
     Gyro {
     }
@@ -579,10 +575,9 @@ DEF SCONE8 Robot {
     }
   }
   controller "traffic_cone_controller"
-  customData "moved"
 }
 DEF SCONE9 Robot {
-  translation 210.8 -5.1291 0.35
+  translation 210.8 -3.7 0.35
   children [
     Gyro {
     }
@@ -634,289 +629,12 @@ DEF SCONE9 Robot {
     }
   }
   controller "traffic_cone_controller"
-  customData "moved"
 }
-DEF SCONE10 Robot {
-  translation 218.4 -4.8452 0.35
-  children [
-    Gyro {
-    }
-    GPS {
-    }
-    Accelerometer {
-    }
-    Solid {
-      translation 0 0 -0.33
-      children [
-        DEF BASE-SHAPE Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 0 0 0
-            }
-          }
-          geometry Box {
-            size 0.38 0.38 0.05
-          }
-        }
-      ]
-      name "solid(1)"
-    }
-    Solid {
-      children [
-        Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 1 0.647059 0
-            }
-          }
-          geometry Cone {
-            bottomRadius 0.15
-            height 0.71
-            subdivision 50
-          }
-        }
-      ]
-    }
-  ]
-  name "SCONE10"
-  boundingObject Cylinder {
-    height 0.71
-    radius 0.15
-  }
-  physics Physics {
-    mass 3.63
-    damping Damping {
-    }
-  }
-  controller "traffic_cone_controller"
-  customData "moved"
-}
-DEF SCONE11 Robot {
-  translation 226 -4.5613 0.35
-  children [
-    Gyro {
-    }
-    GPS {
-    }
-    Accelerometer {
-    }
-    Solid {
-      translation 0 0 -0.33
-      children [
-        DEF BASE-SHAPE Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 0 0 0
-            }
-          }
-          geometry Box {
-            size 0.38 0.38 0.05
-          }
-        }
-      ]
-      name "solid(1)"
-    }
-    Solid {
-      children [
-        Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 1 0.647059 0
-            }
-          }
-          geometry Cone {
-            bottomRadius 0.15
-            height 0.71
-            subdivision 50
-          }
-        }
-      ]
-    }
-  ]
-  name "SCONE11"
-  boundingObject Cylinder {
-    height 0.71
-    radius 0.15
-  }
-  physics Physics {
-    mass 3.63
-    damping Damping {
-    }
-  }
-  controller "traffic_cone_controller"
-  customData "moved"
-}
-DEF SCONE12 Robot {
-  translation 233.6 -4.2774 0.35
-  children [
-    Gyro {
-    }
-    GPS {
-    }
-    Accelerometer {
-    }
-    Solid {
-      translation 0 0 -0.33
-      children [
-        DEF BASE-SHAPE Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 0 0 0
-            }
-          }
-          geometry Box {
-            size 0.38 0.38 0.05
-          }
-        }
-      ]
-      name "solid(1)"
-    }
-    Solid {
-      children [
-        Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 1 0.647059 0
-            }
-          }
-          geometry Cone {
-            bottomRadius 0.15
-            height 0.71
-            subdivision 50
-          }
-        }
-      ]
-    }
-  ]
-  name "SCONE12"
-  boundingObject Cylinder {
-    height 0.71
-    radius 0.15
-  }
-  physics Physics {
-    mass 3.63
-    damping Damping {
-    }
-  }
-  controller "traffic_cone_controller"
-  customData "moved"
-}
-DEF SCONE13 Robot {
-  translation 241.2 -3.9936 0.35
-  children [
-    Gyro {
-    }
-    GPS {
-    }
-    Accelerometer {
-    }
-    Solid {
-      translation 0 0 -0.33
-      children [
-        DEF BASE-SHAPE Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 0 0 0
-            }
-          }
-          geometry Box {
-            size 0.38 0.38 0.05
-          }
-        }
-      ]
-      name "solid(1)"
-    }
-    Solid {
-      children [
-        Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 1 0.647059 0
-            }
-          }
-          geometry Cone {
-            bottomRadius 0.15
-            height 0.71
-            subdivision 50
-          }
-        }
-      ]
-    }
-  ]
-  name "SCONE13"
-  boundingObject Cylinder {
-    height 0.71
-    radius 0.15
-  }
-  physics Physics {
-    mass 3.63
-    damping Damping {
-    }
-  }
-  controller "traffic_cone_controller"
-  customData "moved"
-}
-DEF SCONE14 Robot {
-  translation 248.8 -3.7097 0.35
-  children [
-    Gyro {
-    }
-    GPS {
-    }
-    Accelerometer {
-    }
-    Solid {
-      translation 0 0 -0.33
-      children [
-        DEF BASE-SHAPE Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 0 0 0
-            }
-          }
-          geometry Box {
-            size 0.38 0.38 0.05
-          }
-        }
-      ]
-      name "solid(1)"
-    }
-    Solid {
-      children [
-        Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 1 0.647059 0
-            }
-          }
-          geometry Cone {
-            bottomRadius 0.15
-            height 0.71
-            subdivision 50
-          }
-        }
-      ]
-    }
-  ]
-  name "SCONE14"
-  boundingObject Cylinder {
-    height 0.71
-    radius 0.15
-  }
-  physics Physics {
-    mass 3.63
-    damping Damping {
-    }
-  }
-  controller "traffic_cone_controller"
-  customData "moved"
-}
-RangeRoverSportSVR {
-  translation 26.1 -5.42 0.4
-  name "vehicle(1)"
-  controller "custom_car_controller"
-}
-Robot {
-  controller "<none>"
+DEF SUPERVISOR Robot {
+  controller "workzone_supervisor_controller"
   supervisor TRUE
+}
+ToyotaPrius {
+  translation 2.72001 -5.07682 0.4
+  controller "custom_car_controller"
 }

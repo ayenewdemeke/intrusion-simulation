@@ -4,7 +4,7 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/RoadLine.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/StraightRoadSegment.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/range_rover/RangeRoverSportSVR.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/toyota/ToyotaPrius.proto"
 
 WorldInfo {
   info [
@@ -80,8 +80,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.15044564833442792 0.23491801139253665 -0.9603018456821841 1.1762984709927957
-  position 185.20385495102624 15.443575208212986 7.2595571740963285
+  orientation 0.5243713282175305 0.5096825374093659 -0.6820985421501302 1.9706794285465967
+  position 246.97760532891715 59.75829830380576 235.42790396759196
   near 1
   followType "None"
   followSmoothness 0
@@ -142,7 +142,7 @@ DEF ROAD_SEGMENT StraightRoadSegment {
   length 500
 }
 DEF SCONE1 Robot {
-  translation 157.6 -7.1161 0.35
+  translation 150 -7.4 0.35
   children [
     Gyro {
     }
@@ -196,7 +196,7 @@ DEF SCONE1 Robot {
   controller "traffic_cone_controller"
 }
 DEF SCONE2 Robot {
-  translation 172.8 -6.5484 0.35
+  translation 165.2 -7.2 0.35
   children [
     Gyro {
     }
@@ -250,7 +250,7 @@ DEF SCONE2 Robot {
   controller "traffic_cone_controller"
 }
 DEF SCONE3 Robot {
-  translation 188 -5.9807 0.35
+  translation 180.5 -7 0.35
   children [
     Gyro {
     }
@@ -302,9 +302,10 @@ DEF SCONE3 Robot {
     }
   }
   controller "traffic_cone_controller"
+  customData "moved"
 }
 DEF SCONE4 Robot {
-  translation 203.2 -5.4129 0.35
+  translation 195.7 -6.8 0.35
   children [
     Gyro {
     }
@@ -356,9 +357,10 @@ DEF SCONE4 Robot {
     }
   }
   controller "traffic_cone_controller"
+  customData "moved"
 }
 DEF SCONE5 Robot {
-  translation 218.4 -4.8452 0.35
+  translation 211 -6.6 0.35
   children [
     Gyro {
     }
@@ -410,9 +412,10 @@ DEF SCONE5 Robot {
     }
   }
   controller "traffic_cone_controller"
+  customData "moved"
 }
 DEF SCONE6 Robot {
-  translation 233.6 -4.2774 0.35
+  translation 226.2 -6.4 0.35
   children [
     Gyro {
     }
@@ -466,7 +469,7 @@ DEF SCONE6 Robot {
   controller "traffic_cone_controller"
 }
 DEF SCONE7 Robot {
-  translation 248.8 -3.7097 0.35
+  translation 241.4 -6.2 0.35
   children [
     Gyro {
     }
@@ -519,9 +522,656 @@ DEF SCONE7 Robot {
   }
   controller "traffic_cone_controller"
 }
-RangeRoverSportSVR {
-  translation 26.1 -5.42 0.4
-  name "vehicle(1)"
+DEF SCONE8 Robot {
+  translation 256.7 -6 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE8"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+DEF SCONE9 Robot {
+  translation 271.9 -5.8 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE9"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+DEF SCONE10 Robot {
+  translation 287.2 -5.6 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE10"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+DEF SCONE11 Robot {
+  translation 302.4 -5.4 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE11"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+DEF SCONE12 Robot {
+  translation 317.6 -5.1 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE12"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+DEF SCONE13 Robot {
+  translation 332.9 -4.9 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE13"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+DEF SCONE14 Robot {
+  translation 348.1 -4.7 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE14"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+DEF SCONE15 Robot {
+  translation 363.4 -4.5 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE15"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+DEF SCONE16 Robot {
+  translation 378.6 -4.3 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE16"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+DEF SCONE17 Robot {
+  translation 393.8 -4.1 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE17"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+DEF SCONE18 Robot {
+  translation 409.1 -3.9 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE18"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+DEF SCONE19 Robot {
+  translation 424.3 -3.7 0.35
+  children [
+    Gyro {
+    }
+    GPS {
+    }
+    Accelerometer {
+    }
+    Solid {
+      translation 0 0 -0.33
+      children [
+        DEF BASE-SHAPE Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 0
+            }
+          }
+          geometry Box {
+            size 0.38 0.38 0.05
+          }
+        }
+      ]
+      name "solid(1)"
+    }
+    Solid {
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.647059 0
+            }
+          }
+          geometry Cone {
+            bottomRadius 0.15
+            height 0.71
+            subdivision 50
+          }
+        }
+      ]
+    }
+  ]
+  name "SCONE19"
+  boundingObject Cylinder {
+    height 0.71
+    radius 0.15
+  }
+  physics Physics {
+    mass 3.63
+    damping Damping {
+    }
+  }
+  controller "traffic_cone_controller"
+}
+ToyotaPrius {
+  translation 9.36445 -5.41158 0.4
   controller "custom_car_controller"
 }
 DEF SUPERVISOR Robot {
