@@ -80,8 +80,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.25329174177047875 0.17937453765011072 -0.9506145742590348 1.9565571185750745
-  position 190.98617074969368 7.256528371890323 7.533429343511851
+  orientation -0.15104452506567634 -0.018054877082961815 0.9883620656729007 3.3768058721720275
+  position 198.05334389036977 0.17296512903165961 3.5262422535374585
   near 1
   followType "None"
   followSmoothness 0
@@ -171,7 +171,7 @@ DEF SCONE1 Robot {
         Shape {
           appearance Appearance {
             material Material {
-              diffuseColor 1 0.647059 0
+              diffuseColor 0.952941 0.32549 0.0117647
             }
           }
           geometry Cone {
@@ -225,7 +225,7 @@ DEF SCONE2 Robot {
         Shape {
           appearance Appearance {
             material Material {
-              diffuseColor 1 0.647059 0
+              diffuseColor 0.952941 0.32549 0.0117647
             }
           }
           geometry Cone {
@@ -279,7 +279,7 @@ DEF SCONE3 Robot {
         Shape {
           appearance Appearance {
             material Material {
-              diffuseColor 1 0.647059 0
+              diffuseColor 0.952941 0.32549 0.0117647
             }
           }
           geometry Cone {
@@ -333,7 +333,7 @@ DEF SCONE4 Robot {
         Shape {
           appearance Appearance {
             material Material {
-              diffuseColor 1 0.647059 0
+              diffuseColor 0.952941 0.32549 0.0117647
             }
           }
           geometry Cone {
@@ -356,7 +356,6 @@ DEF SCONE4 Robot {
     }
   }
   controller "traffic_cone_controller"
-  customData "moved"
 }
 DEF SCONE5 Robot {
   translation 180.4 -5.6 0.35
@@ -388,7 +387,7 @@ DEF SCONE5 Robot {
         Shape {
           appearance Appearance {
             material Material {
-              diffuseColor 1 0.647059 0
+              diffuseColor 0.952941 0.32549 0.0117647
             }
           }
           geometry Cone {
@@ -411,7 +410,6 @@ DEF SCONE5 Robot {
     }
   }
   controller "traffic_cone_controller"
-  customData "moved"
 }
 DEF SCONE6 Robot {
   translation 188 -5.1 0.35
@@ -443,7 +441,7 @@ DEF SCONE6 Robot {
         Shape {
           appearance Appearance {
             material Material {
-              diffuseColor 1 0.647059 0
+              diffuseColor 0.952941 0.32549 0.0117647
             }
           }
           geometry Cone {
@@ -466,7 +464,6 @@ DEF SCONE6 Robot {
     }
   }
   controller "traffic_cone_controller"
-  customData "moved"
 }
 DEF SCONE7 Robot {
   translation 195.6 -4.6 0.35
@@ -498,7 +495,7 @@ DEF SCONE7 Robot {
         Shape {
           appearance Appearance {
             material Material {
-              diffuseColor 1 0.647059 0
+              diffuseColor 0.952941 0.32549 0.0117647
             }
           }
           geometry Cone {
@@ -552,7 +549,7 @@ DEF SCONE8 Robot {
         Shape {
           appearance Appearance {
             material Material {
-              diffuseColor 1 0.647059 0
+              diffuseColor 0.952941 0.32549 0.0117647
             }
           }
           geometry Cone {
@@ -606,7 +603,7 @@ DEF SCONE9 Robot {
         Shape {
           appearance Appearance {
             material Material {
-              diffuseColor 1 0.647059 0
+              diffuseColor 0.952941 0.32549 0.0117647
             }
           }
           geometry Cone {
@@ -635,6 +632,6 @@ DEF SUPERVISOR Robot {
   supervisor TRUE
 }
 ToyotaPrius {
-  translation 2.72001 -5.07682 0.4
+  translation 1.56322 -5.25451 0.4
   controller "custom_car_controller"
 }
